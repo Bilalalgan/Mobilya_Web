@@ -18,3 +18,16 @@ Route::get('/productdetails', function () {
 Route::get('/blog', function () {
     return view('blog'); 
 });
+
+Route::get('/blog-detail', function () {
+    return view('blog-detail'); 
+});
+
+Route::get('/about', function () {
+    return view('about'); 
+});
+
+Route::get('/contact', function () {
+    return view('contact'); 
+});
+

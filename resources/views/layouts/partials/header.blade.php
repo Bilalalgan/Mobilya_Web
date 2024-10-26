@@ -3,9 +3,37 @@
     <!-- Header desktop -->
     <div class="container-menu-desktop">
 
+        <!-- Topbar -->
+        <div class="top-bar">
+            <div class="content-topbar flex-sb-m h-full container">
+                <div class="left-top-bar">
+                    
+                </div>
+                <div class="right-top-bar flex-w h-full">
+                    <a href="#" class="flex-c-m trans-04 p-lr-25">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+
+                    <a href="#" class="flex-c-m trans-04 p-lr-25">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="flex-c-m trans-04 p-lr-25">
+                        <i class="fa fa-youtube"></i>
+                    </a>
+
+                    <a href="#" class="flex-c-m trans-04 p-lr-25">
+                        <i class="fa fa-pinterest"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <div class="wrap-menu-desktop how-shadow1">
             <nav class="limiter-menu-desktop container">
                 
+                
+
                 <!-- Logo desktop -->		
                 <a href="/" class="logo">
                     <img src="images/icons/logo-01.png" alt="IMG-LOGO">
@@ -15,7 +43,7 @@
                 <div class="menu-desktop">
                     <ul class="main-menu">
                         <li>
-                            <a href="/">Home</a>
+                            <a href="/">Anasayfa</a>
                             <ul class="sub-menu">
                                 <li><a href="/">Homepage 1</a></li>
                                 <li><a href="home-02.html">Homepage 2</a></li>
@@ -24,19 +52,19 @@
                         </li>
 
                         <li class="active-menu">
-                            <a href="/product">Shop</a>
+                            <a href="/product">Ürünlerimiz</a>
                         </li>
 
                         <li>
-                            <a href="blog.html">Blog</a>
+                            <a href="/blog">Uygulamalar</a>
                         </li>
 
                         <li>
-                            <a href="about.html">About</a>
+                            <a href="/about">Hakkımızda</a>
                         </li>
 
                         <li>
-                            <a href="contact.html">Contact</a>
+                            <a href="/contact">İletişim</a>
                         </li>
                     </ul>
                 </div>	
@@ -140,7 +168,7 @@
 
 
             <li>
-                <a href="blog.html">Blog</a>
+                <a href="/blog">Blog</a>
             </li>
 
             <li>
