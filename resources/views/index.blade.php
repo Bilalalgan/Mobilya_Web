@@ -17,7 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
 	<link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
 	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
-	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css"> 
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body class="animsition">
