@@ -32,8 +32,6 @@
         <div class="wrap-menu-desktop how-shadow1">
             <nav class="limiter-menu-desktop container">
                 
-                
-
                 <!-- Logo desktop -->		
                 <a href="/" class="logo">
                     <img src="images/icons/logo-01.png" alt="IMG-LOGO">
@@ -52,19 +50,19 @@
                         </li>
 
                         <li class="active-menu">
-                            <a href="/product">Ürünlerimiz</a>
+                            <a href="/urunlerimiz">Ürünlerimiz</a>
                         </li>
 
                         <li>
-                            <a href="/blog">Uygulamalar</a>
+                            <a href="/uygulamalarimiz">Uygulamalar</a>
                         </li>
 
                         <li>
-                            <a href="/about">Hakkımızda</a>
+                            <a href="/hakkimizda">Hakkımızda</a>
                         </li>
 
                         <li>
-                            <a href="/contact">İletişim</a>
+                            <a href="/iletisim">İletişim</a>
                         </li>
                     </ul>
                 </div>	
@@ -79,7 +77,7 @@
                         <i class="zmdi zmdi-shopping-cart"></i>
                     </div>
 
-                    <a href="#" class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0">
+                    <a href="#" class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="1">
                         <i class="zmdi zmdi-favorite-outline"></i>
                     </a>
                 </div>
@@ -91,7 +89,7 @@
     <div class="wrap-header-mobile">
         <!-- Logo moblie -->		
         <div class="logo-mobile">
-            <a href="index.html"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
+            <a href="/"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
         </div>
 
         <!-- Icon header -->
@@ -122,27 +120,21 @@
     <div class="menu-mobile">
         <ul class="topbar-mobile">
             <li>
-                <div class="left-top-bar">
-                    Free shipping for standard order over $100
-                </div>
-            </li>
-
-            <li>
                 <div class="right-top-bar flex-w h-full">
                     <a href="#" class="flex-c-m p-lr-10 trans-04">
-                        Help & FAQs
+                        <i class="fa fa-facebook"></i>
                     </a>
 
                     <a href="#" class="flex-c-m p-lr-10 trans-04">
-                        My Account
+                        <i class="fa fa-instagram"></i>
                     </a>
 
                     <a href="#" class="flex-c-m p-lr-10 trans-04">
-                        EN
+                        <i class="fa fa-youtube"></i>
                     </a>
 
                     <a href="#" class="flex-c-m p-lr-10 trans-04">
-                        USD
+                        <i class="fa fa-pinterest"></i>
                     </a>
                 </div>
             </li>
@@ -150,9 +142,9 @@
 
         <ul class="main-menu-m">
             <li>
-                <a href="index.html">Home</a>
+                <a href="/">Anasayfa</a>
                 <ul class="sub-menu-m">
-                    <li><a href="index.html">Homepage 1</a></li>
+                    <li><a href="/">Anasayfa</a></li>
                     <li><a href="home-02.html">Homepage 2</a></li>
                     <li><a href="home-03.html">Homepage 3</a></li>
                 </ul>
@@ -162,21 +154,19 @@
             </li>
 
             <li>
-                <a href="product.html">Shop</a>
-            </li>
-
-
-
-            <li>
-                <a href="/blog">Blog</a>
+                <a href="/urunlerimiz">Ürünlerimiz</a>
             </li>
 
             <li>
-                <a href="about.html">About</a>
+                <a href="/uygulamalarimiz">Uygulamalar</a>
             </li>
 
             <li>
-                <a href="contact.html">Contact</a>
+                <a href="/hakkimizda">Hakkımızda</a>
+            </li>
+
+            <li>
+                <a href="/iletisim">İletişim</a>
             </li>
         </ul>
     </div>
