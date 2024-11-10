@@ -49,38 +49,58 @@
                             </ul>
                         </li>
 
-                        <li class="active-menu">
-                            <a href="/urunlerimiz">Ürünlerimiz</a>
+                        <li class="{{ Route::is('urunlerimiz') ? 'active-menu' : '' }}">
+                            <a href="{{ route('urunlerimiz') }}">Ürünlerimiz</a>
                         </li>
 
-                        <li>
-                            <a href="/uygulamalarimiz">Uygulamalar</a>
+                        <li class="{{ Route::is('uygulamalarimiz') ? 'active-menu' : '' }}">
+                            <a href="{{ route('uygulamalarimiz') }}">Uygulamalar</a>
                         </li>
 
-                        <li>
-                            <a href="/hakkimizda">Hakkımızda</a>
+                        <li class="{{ Route::is('hakkimizda') ? 'active-menu' : '' }}">
+                            <a href="{{ route('hakkimizda') }}">Hakkımızda</a>
                         </li>
 
-                        <li>
-                            <a href="/iletisim">İletişim</a>
+                        <li class="{{ Route::is('iletisim') ? 'active-menu' : '' }}">
+                            <a href="{{ route('iletisim') }}">İletişim</a>
                         </li>
                     </ul>
                 </div>	
 
+                <!-- Eğer kullanıcı oturum açmamışsa -->
+                @guest
                 <!-- Icon header -->
                 <div class="wrap-icon-header flex-w flex-r-m">
-                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
-                        <i class="zmdi zmdi-search"></i>
-                    </div>
-
-                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="2">
-                        <i class="zmdi zmdi-shopping-cart"></i>
-                    </div>
-
-                    <a href="#" class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="1">
-                        <i class="zmdi zmdi-favorite-outline"></i>
+                    <a href="/login" class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
+                        <i class="fa fa-user-circle-o"></i>
                     </a>
                 </div>
+                @endguest
+
+                <!-- Eğer kullanıcı oturum açmışsa -->
+                @auth
+                    <div class="wrap-icon-header flex-w flex-r-m">
+                        <ul class="main-menu">
+                            <li>
+                                <a href="{{ route('dashboard') }}">
+                                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
+                                        <i class="fa fa-address-book"></i>
+                                    </div>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li><a href="{{ route('dashboard') }}">Admin Paneli</a></li>
+                                    <li>
+                                        <!-- Çıkış işlemi form ile yapılır -->
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Çıkış Yap</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                @endauth
             </nav>
         </div>	
     </div>
@@ -92,20 +112,24 @@
             <a href="/"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
         </div>
 
-        <!-- Icon header -->
-        <div class="wrap-icon-header flex-w flex-r-m m-r-15">
-            <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search">
-                <i class="zmdi zmdi-search"></i>
+        @guest
+            <!-- Icon header -->
+            <div class="wrap-icon-header flex-w flex-r-m m-r-15">
+                <a href="{{ route('login') }}" class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 js-show-cart">
+                    <i class="fa fa-user-circle-o"></i>
+                </a>
             </div>
+        @endguest
 
-            <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="2">
-                <i class="zmdi zmdi-shopping-cart"></i>
+        <!-- Eğer kullanıcı oturum açmışsa -->
+        @auth
+            <!-- Icon header -->
+            <div class="wrap-icon-header flex-w flex-r-m m-r-15">
+                <a href="{{ route('dashboard') }}" class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 js-show-cart">
+                    <i class="fa fa-address-book" aria-hidden="true"></i>
+                </a>
             </div>
-
-            <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0">
-                <i class="zmdi zmdi-favorite-outline"></i>
-            </a>
-        </div>
+        @endauth
 
         <!-- Button show menu -->
         <div class="btn-show-menu-mobile hamburger hamburger--squeeze">
@@ -114,7 +138,7 @@
             </span>
         </div>
     </div>
-
+ 
 
     <!-- Menu Mobile -->
     <div class="menu-mobile">
@@ -140,11 +164,11 @@
             </li>
         </ul>
 
-        <ul class="main-menu-m">
+        <ul class="main-menu-m"> 
             <li>
                 <a href="/">Anasayfa</a>
                 <ul class="sub-menu-m">
-                    <li><a href="/">Anasayfa</a></li>
+                    <li><a href="/">Homepage 1</a></li>
                     <li><a href="home-02.html">Homepage 2</a></li>
                     <li><a href="home-03.html">Homepage 3</a></li>
                 </ul>
@@ -167,6 +191,13 @@
 
             <li>
                 <a href="/iletisim">İletişim</a>
+            </li>
+            <li>
+                <!-- Çıkış işlemi form ile yapılır -->
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Çıkış Yap</a>
             </li>
         </ul>
     </div>

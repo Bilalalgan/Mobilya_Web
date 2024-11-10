@@ -21,13 +21,13 @@
 					<div class="p-r-45 p-r-0-lg row">
 						<!-- item blog -->
 						<div class="p-b-63 col-12 col-md-4" >
-							<a href="/blog-detail" class="hov-img0 how-pos5-parent">
-								<img src="images/mutfakdolabi.jpg" alt="IMG-BLOG" style="height:350px">
+							<a href="/uygulama-detay" class="hov-img0 how-pos5-parent">
+								<img src="images/mutfakdolabi.jpg" alt="IMG-BLOG" style="height:350px"> 
 							</a>
 
 							<div class="p-t-32">
 								<h4 class="p-b-15">
-									<a href="/blog-detail" class="ltext-108 cl2 hov-cl1 trans-04">
+									<a href="/uygulama-detay" class="ltext-108 cl2 hov-cl1 trans-04">
 										Mutfak Dolabı Uygulamaları
 									</a>
 								</h4>

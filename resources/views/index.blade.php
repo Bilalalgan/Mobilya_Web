@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-	<title>Home</title>
+	<title>Diamond</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
@@ -92,12 +92,40 @@
 						</ul>
 					</div>	
 
+					<!-- Eğer kullanıcı oturum açmamışsa -->
+					@guest
 					<!-- Icon header -->
 					<div class="wrap-icon-header flex-w flex-r-m">
-						<a href="/login" class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11  js-show-cart">
+						<a href="/login" class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
 							<i class="fa fa-user-circle-o"></i>
 						</a>
 					</div>
+					@endguest
+
+					<!-- Eğer kullanıcı oturum açmışsa -->
+					@auth
+						<div class="wrap-icon-header flex-w flex-r-m">
+							<ul class="main-menu">
+								<li>
+									<a href="{{ route('dashboard') }}">
+										<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
+											<i class="fa fa-address-book"></i>
+										</div>
+									</a>
+									<ul class="sub-menu">
+										<li><a href="{{ route('dashboard') }}">Admin Paneli</a></li>
+										<li>
+											<!-- Çıkış işlemi form ile yapılır -->
+											<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+												@csrf
+											</form>
+											<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Çıkış Yap</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					@endauth
 				</nav>
 			</div>	
 		</div>
@@ -109,12 +137,24 @@
 				<a href="/"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
 			</div>
 
-			<!-- Icon header -->
-			<div class="wrap-icon-header flex-w flex-r-m m-r-15">
-				<a href="/login" class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 js-show-cart">
-					<i class="fa fa-user-circle-o"></i>
-				</a>
-			</div>
+			@guest
+				<!-- Icon header -->
+				<div class="wrap-icon-header flex-w flex-r-m m-r-15">
+					<a href="{{ route('login') }}" class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 js-show-cart">
+						<i class="fa fa-user-circle-o"></i>
+					</a>
+				</div>
+			@endguest
+
+			<!-- Eğer kullanıcı oturum açmışsa -->
+			@auth
+				<!-- Icon header -->
+				<div class="wrap-icon-header flex-w flex-r-m m-r-15">
+					<a href="{{ route('dashboard') }}" class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 js-show-cart">
+						<i class="fa fa-address-book" aria-hidden="true"></i>
+					</a>
+				</div>
+			@endauth
 
 			<!-- Button show menu -->
 			<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
@@ -177,6 +217,13 @@
 				<li>
 					<a href="/iletisim">İletişim</a>
 				</li>
+				<li>
+					<!-- Çıkış işlemi form ile yapılır -->
+					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+						@csrf
+					</form>
+					<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Çıkış Yap</a>
+				</li>
 			</ul>
 		</div>
 
@@ -196,7 +243,6 @@
 			</div>
 		</div>
 	</header>
-
 
 	<!-- Slider -->
 	<section class="section-slide">
@@ -276,7 +322,6 @@
 			</div>
 		</div>
 	</section>
-
 
 	<!-- Banner -->
 	<div class="sec-banner bg0 p-t-80 p-b-50">
